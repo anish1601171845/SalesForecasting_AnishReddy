@@ -3,7 +3,7 @@ Generates brag_sheet.pdf -- a one-page, recruiter-facing summary of the project.
 Distinct from summary.docx (the CFO-facing business report): this one is designed to be
 dropped into a resume email or portfolio site.
 """
-import qrcode
+import qrcode 
 from fpdf import FPDF
 
 PURPLE = (124, 58, 237)
@@ -14,8 +14,8 @@ GREEN = (52, 211, 153)
 WHITE = (255, 255, 255)
 
 # Placeholder links -- replace with your real repo / live app URLs before sharing.
-GITHUB_URL = "https://github.com/anishreddy/demandiq-sales-forecasting"
-QR_TARGET = GITHUB_URL
+GITHUB_URL = "https://github.com/anish1601171845/SalesForecasting_AnishReddy.git"
+QR_TARGET = "https://anish1601171845-salesforecasting-anishreddy-app-8mfep4.streamlit.app/"
 
 qr_img = qrcode.make(QR_TARGET, border=2)
 qr_path = "_qr_temp.png"
@@ -118,7 +118,7 @@ pdf.image(qr_path, x=qr_x, y=qr_y, w=qr_size, h=qr_size)
 pdf.set_xy(qr_x, qr_y + qr_size + 1)
 pdf.set_font("Helvetica", "", 7.5)
 pdf.set_text_color(*GREY)
-pdf.multi_cell(qr_size, 3.5, "Scan for the GitHub repo\n(replace with your live\nStreamlit app link)", align="C")
+pdf.multi_cell(qr_size, 3.5, "Scan for the GitHub repo  https://anish1601171845-salesforecasting-anishreddy-app-8mfep4.streamlit.app/", align="C")
 
 # ---- Footer ----
 pdf.set_xy(12, 274)
