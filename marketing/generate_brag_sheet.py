@@ -126,7 +126,7 @@ pdf.set_draw_color(200, 200, 200)
 pdf.line(12, 273, PAGE_W - 12, 273)
 pdf.set_font("Helvetica", "", 8.5)
 pdf.set_text_color(*GREY)
-pdf.cell(0, 6, "github.com/anishreddy  *  linkedin.com/in/anishreddy  *  Replace with your real contact details before sharing", align="C")
+pdf.cell(0, 6, "github.com/anish1601171845  *  linkedin.com/in/bobbala-anish-reddy-023678359", align="C")
 
 pdf.output("brag_sheet.pdf")
 print("brag_sheet.pdf written")
